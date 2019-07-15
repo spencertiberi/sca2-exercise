@@ -9,6 +9,7 @@ const tokenize = str => {
 
 const reverse = str => {
   // TODO - write a function which reverses the string
+  // Change!
 }
 
 const uniqueOnes = arr => {
@@ -31,7 +32,14 @@ const unzip = arr => {
 
 const shiftRight = (str, num) => {
   // TODO - write a function which shifts a string `num` characters to the right
-  // Example = shiftThree("Hello") === "lloHe"
+  // Example = shiftRight("Hello", 2) === "lloHe"
+  arr = str.split("")
+  for (let i = 0; i < num; i++) {
+    const l = arr.shift()
+    arr.push(l)
+  }
+  newStr = arr.join("")
+  return newStr
 }
 
 const announceDate = () => {
@@ -44,4 +52,5 @@ const announceDate = () => {
 assert(1 < 2)
 assert(1 + 2 === 3)
 assert([2, 3][0] === 2)
+assert(shiftRight("Hello", 2) === "lloHe")
 // asssert (reverse("3df") === "fd3")
